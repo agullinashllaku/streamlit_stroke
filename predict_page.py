@@ -23,7 +23,7 @@ def show_predict_page():
     if work_type == "Governemnt Job":
         work_type = "Govt_job"
     elif work_type == "Stay-at-home parent":
-        work_type = "Children"
+        work_type = "children"
     elif work_type == "Never worked":
         work_type = "Never_worked"
     else:
@@ -46,8 +46,6 @@ def show_predict_page():
     # Make prediction and get probabilities using the pipeline
     if st.button('Predict Stroke Probability'):
         probability = pipe.predict_proba(user_input)[0][1]  # Probability of class 1 (stroke)
-        st.empty()
-        st.write(f"# Probability of Stroke: {probability*100:.2f}")
-        st.empty()
+        st.write(f"# Probability of Stroke: {probability*100:.2f}%")
         
 show_predict_page()
