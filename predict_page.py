@@ -27,7 +27,7 @@ def show_predict_page():
     elif work_type == "Never worked":
         work_type = "Never_worked"
     else:
-        work_type
+        work_type = work_type
 
     # Create a DataFrame with the mapped user input
     user_input = pd.DataFrame({
